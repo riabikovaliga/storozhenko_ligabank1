@@ -1,0 +1,200 @@
+.login-popup {
+	display: flex;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	box-sizing: border-box;
+	z-index: 99;
+}
+
+.login-popup__form {
+	width: 290px;
+	margin-right: 17px;
+	padding: 45px 15px;
+	padding-bottom: 41px;
+
+	background-color: #F6F7FF;
+	border: 4px solid #2C36F2;
+	box-sizing: border-box;
+}
+
+.login-popup__header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.login-popup__logo {
+	margin-left: -5px;
+	width: 150px;
+	height: 31px;
+
+	background-size: cover;
+	background-image: url("../../images/vector/logo-popup.svg");
+	background-repeat: no-repeat;
+}
+
+.login-popup__close-button {
+	width: 13px;
+	height: 13px;
+
+	background-color: transparent;
+	background-size: cover;
+	background-image: url("../../images/vector/cross.svg");
+	border: none;
+
+}
+
+.login-popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	padding-top: 28px;
+	border: none;
+}
+
+.login-popup__input-title {
+	display: block;
+	margin-bottom: 6px;
+	font-size: 16px;
+	color: #394959;
+}
+
+.login-popup__input {
+	width: 100%;
+	margin-bottom: 21px;
+	line-height: 56px;
+	padding-left: 20px;
+
+	background: transparent;
+	border: 1px solid #1F1E25;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.login-popup__submit-button {
+	display: block;
+	width: 100%;
+	padding-top: 3px;
+	margin-top: 9px;
+
+	font-size: 14px;
+	color: #F6F7FF;
+	line-height: 47px;
+
+	background: #2C36F2;
+	border: none;
+	border-radius: 4px;
+}
+
+.login-popup__help {
+	margin: 0 auto;
+	margin-top: 13px;
+	color: #707C87;
+	font-size: 14px;
+	order: 99;
+	z-index: 100;
+}
+
+.login-popup__field--secret {
+	position: relative;
+}
+
+.login-popup__field-button-secret {
+	position: absolute;
+
+	bottom: 46px;
+	right: 14px;
+	width: 22px;
+	height: 11px;
+	padding: 0;
+
+	background: transparent;
+	border: none;
+
+	&::before {
+		position: absolute;
+		display: block;
+		content: "";
+	
+		width: 22px;
+		height: 11px;
+		top: 0;
+		
+		background-size: cover;
+		background-image: url("../../images/vector/closed-eye.svg");
+		background-repeat: no-repeat;
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.login-popup__form {
+		width: 678px;
+		margin-right: 48px;
+		padding: 55px 82px;
+	}
+
+	.login-popup__logo {
+		margin: 0;
+	}
+
+	.login-popup__close-button {
+		width: 18px;
+		height: 18px;
+		
+		&::before {
+			width: 18px;
+			height: 18px;
+		}
+	}
+
+	.login-popup__wrapper {
+		padding-top: 38px;
+	}
+
+	.login-popup__input-title {
+		line-height: 20px;
+		margin: 0;
+	}
+
+	.login-popup__input {
+		margin-bottom: 26px;
+	}
+
+	.login-popup__field-button-secret {
+		bottom: 51px;
+		right: 23px;
+	}
+
+	.login-popup__help {
+		margin: 0;
+		margin-left: auto;
+		margin-top: -21px;
+		line-height: 20px;
+		font-size: 12px;
+		order: unset;
+	}
+
+	.login-popup__submit-button {
+		margin-top: 24px;
+		line-height: 56px;
+		font-weight: 500;
+		font-size: 18px;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.login-popup__form {
+		padding: 55px;
+		max-width: 544px;
+	}
+
+	.login-popup__field {
+		line-height: 70px;
+	}
+}

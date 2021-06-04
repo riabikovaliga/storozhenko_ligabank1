@@ -1,0 +1,292 @@
+.footer {
+	margin-top: 56px;
+	padding-bottom: 28px;
+	background: #F6F7FF;
+}
+
+.footer__container {
+	display: flex;
+	flex-direction: column;
+
+	padding: 18px 14px;
+	margin: 0 auto;
+	max-width: 321px;
+}
+
+.footer__logo {
+	margin-top: 11px;
+	margin-left: -4px;
+	width: 116px;
+	height: 21px;
+
+	background-size: cover;
+	background-image: url("../../images/vector/logo.svg");
+	background-repeat: no-repeat;
+}
+
+.footer__location {
+	display: none;
+}
+
+.footer-navigation {
+	margin: 19px 0;
+	margin-left: 1px;
+	margin-bottom: 17px;
+}
+
+.footer-navigation__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-navigation__item-link {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 209%;
+	color: #1F1E25;
+
+	&:hover {
+		color: #2c36f2;
+	}
+}
+
+.footer-hotline {
+	padding-left: 30px;
+}
+
+.footer-hotline__title {
+	margin: 0;
+}
+
+.footer-hotline__phone {
+	position: relative;
+	margin-bottom: 19px;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+
+		top: 0;
+		left: -30px;
+
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&--cell::before {
+		width: 11px;
+		height: 18px;
+		background-image: url("../../images/vector/footer-cell.svg");
+	}
+
+	&--regular {
+		margin-left: 4px;
+
+		&::before {
+			top: 2px;
+			left: -33px;
+			width: 15px;
+			height: 16px;
+			background-image: url("../../images/vector/phone.svg");
+		}
+	}
+}
+
+.footer-hotline__info {
+	display: block;
+	width: 170px;
+	margin-top: 2px;
+
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 140%;
+	color: #707C87;
+}
+
+.footer-social {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	margin-left: -5px;
+	padding: 0;
+}
+
+.footer-social__link {
+	position: relative;
+	display: block;
+
+	width: 20px;
+	height: 20px;
+	margin-right: 15px;
+
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+
+	&--facebook {
+		height: 17px;
+		background-image: url("../../images/vector/facebook.svg");
+	}
+
+	&--instagram {
+		width: 16px;
+		background-image: url("../../images/vector/instagram.svg");
+	}
+
+	&--twitter {
+		width: 16px;
+		margin-left: 5px;
+		margin-right: 10px;
+		background-position: center;
+		background-image: url("../../images/vector/twitter.svg");
+	}
+
+	&--youtube {
+		margin-right: 0;
+		margin-left: 9px;
+		width: 17px;
+		background-image: url("../../images/vector/youtube.svg");
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.footer {
+		margin-top: 75px;
+	}
+
+	.footer__container {
+		flex-wrap: wrap;
+		max-height: 350px;
+		max-width: unset;
+		margin: 0 auto;
+		padding: 50px 45px;
+	}
+
+	.footer__logo {
+		margin-top: 0;
+		width: 138px;
+		height: 25px;
+	}
+
+	.footer-navigation {
+		margin: 24px 0;
+		order: 2;
+	}
+
+	.footer-navigation__item-link {
+		font-size: 16px;
+		line-height: 195%;
+	}
+
+	.footer__location {
+		display: block;
+		width: 252px;
+
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 140%;
+		color: #707C87;
+
+		order: 3;
+	}
+
+	.footer__location-text {
+		margin: 0;
+	}
+
+	.footer-hotline {
+		width: 194px;
+		margin-top: 11px;
+		order: 4;
+	}
+
+	.footer-hotline__phone {
+		margin-bottom: 26px;
+	}
+
+	.footer-social {
+		order: 4;
+	}
+
+	.footer-social__link--youtube {
+		margin-left: 10px;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.footer {
+		margin-top: 105px;
+	}
+
+	.footer__logo {
+		margin-top: -2px;
+		margin-left: -1px;
+		margin-right: 102px;
+		width: 149px;
+		height: 26px;
+	}
+
+	.footer__container {
+		position: relative;
+		flex-direction: row;
+		justify-content: space-between;
+
+		margin: 0 auto;
+		padding: 0 20px;
+		padding-top: 51px;
+		max-width: 1210px;
+
+		box-sizing: border-box;
+	}
+
+	.footer__location {
+		position: absolute;
+		top: 93px;
+		left: 20px;
+	}
+
+	.footer-navigation {
+		min-width: 150px;
+		margin-top: 0px;
+		margin-left: auto;
+	}
+
+	.footer-hotline {
+		display: flex;
+		margin-top: 9px;
+		margin-left: 73px;
+		min-width: 450px;
+		justify-content: space-between;
+	}
+
+	.footer-social {
+		justify-self: flex-end;
+		margin-left: 5px;
+		margin-top: 8px;
+	}
+
+	.footer-social__link {
+		
+		&--facebook {
+			margin: 0;
+			margin-left: 20px;
+		}
+		
+		&--instagram {
+			margin: 0;
+			margin-left: 10px;
+		}
+		
+		&--twitter {
+			margin: 0;
+			margin-left: 15px;
+		}
+		
+		&--youtube {
+			margin: 0;
+			margin-left: 15px;
+		}
+	}
+}

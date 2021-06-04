@@ -1,0 +1,51 @@
+.identificator {
+	display: flex;
+	position: absolute;
+	align-content: center;
+	list-style: none;
+
+	padding: 0;
+	margin: 6px 0px;
+	align-self: center;
+	bottom: 0;
+}
+
+.identificator__radio {
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	margin: 0 3px;
+	border-radius: 50%;
+	background-color: #2028B6;
+
+	&--checked {
+		background-color: #F6F7FF;
+	}
+	
+	&-services--checked {
+		background-color: #E0E0E0;
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.identificator {
+		margin: 11px 0px;
+	}
+
+	.identificator__radio {
+		width: 8px;
+		height: 8px;
+		margin: 0 4px;
+	}
+}
+
+
+@media (min-width: $desktop-width) {
+	.identificator {
+		margin: 36px 0px;
+		
+		&--services {
+			display: none;
+		}
+	}
+}

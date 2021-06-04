@@ -1,0 +1,476 @@
+.services {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.services__wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
+.services__tabs {
+	display: none;
+}
+
+.services__list {
+	display: flex;
+
+	padding: 0;
+	margin: 0;
+	width: 100%;
+
+	list-style: none;
+
+	transition: margin-left 1s ease;
+}
+
+.services__item-wrapper {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.services__item {
+	position: relative;
+	min-width: 100vw;
+	min-width: 100%;
+	padding: 60px 15px;
+	box-sizing: border-box;
+
+	background-color: #F6F7FF;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+
+		width: 87px;
+		height: 113px;
+		right: 0px;
+		top: 98px;
+
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&--deposits::before {
+		background-image: url("../../images/piggy-bank-mobile.png");
+	}
+
+	&--credit::before {
+		background-image: url("../../images/car-mobile.png");
+	}
+
+	&--insurance::before {
+		background-image: url("../../images/lock-mobile.png");
+	}
+
+	&--app {
+		padding-bottom: 49px;
+
+		&::before {
+			background-image: url("../../images/cell-mobile.png");
+		}
+	}
+}
+
+.services__item-title {
+	position: relative;
+	margin: 0;
+	margin-top: -5px;
+	
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	color: #1F1E25;
+	z-index: 5;
+	
+	&--credit {
+		margin-right: 55px;
+	}
+
+	&--insurance {
+		margin-right: 40px;
+	}
+
+	&--app {
+		margin-right: 50px;
+	}
+}
+
+.services__options-list {
+	position: relative;
+	padding-left: 15px;
+	padding-top: 20px;
+	width: 220px;
+
+	list-style: none;
+	z-index: 5;
+
+	&--insurance {
+		margin-bottom: 25px;
+	}
+
+	&--app li {
+		display: block;
+		margin-right: 20px;
+
+		&:first-child {
+			margin-right: 45px;
+		}
+	}
+}
+
+.services__option {
+	position: relative;
+
+	margin-top: 0px;
+	margin-bottom: 11px;
+
+	font-size: 14px;
+	line-height: 140%;
+	color: #1F1E25;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+	
+		width: 10px;
+		height: 9px;
+		left: -16px;
+		top: 5px;
+	
+		background-size: contain;
+		background-image: url("../../images/vector/check.svg");
+		background-repeat: no-repeat;
+	}
+}
+
+.services__option-button {
+	display: block;
+	position: relative;
+
+	margin: 0 auto;
+	padding-right: 5px;
+	margin-top: 23px;
+
+	line-height: 43px;
+	font-weight: 500;
+	font-size: 14px;
+	color: #F6F7FF;
+	text-align: center;
+
+	background: #2C36F2;
+	border-radius: 4px;
+	z-index: 5;
+}
+
+.services__offer {
+	margin-right: 20px;
+	margin-top: 22px;
+
+	font-size: 14px;
+	line-height: 145%;
+	color: #1F1E25;
+}
+
+.services__offer-link {
+	font-weight: 700;
+	color: #1F1E25;
+	text-decoration: underline;
+}
+
+
+@media (min-width: $tablet-width) {
+	.services__list {
+		transition: unset;
+	}
+
+	.services__item-wrapper {
+		padding-right: 295px;
+	}
+
+	.services__item {
+		padding: 60px 45px;
+	
+		&::before {
+			width: 289px;
+			height: 260px;
+			right: 45px;
+			top: 60px;
+		}
+	
+		&--deposits::before {
+			background-image: url("../../images/piggy-bank-tablet.png");
+		}
+	
+		&--credit::before {
+			background-image: url("../../images/car-tablet.png");
+		}
+	
+		&--insurance::before {
+			background-image: url("../../images/lock-tablet.png");
+		}
+	
+		&--app {
+			padding-bottom: 49px;
+	
+			&::before {
+				background-image: url("../../images/cell-tablet.png");
+			}
+		}
+	}
+
+	.services__item-title {
+		font-weight: 500;
+		font-size: 18px;
+
+		&--credit {
+			margin-right: 145px;
+		}
+
+		&--insurance {
+			margin-right: 100px;
+		}
+	}
+
+	.services__options-list {
+		padding-left: 21px;
+		padding-top: 24px;
+		width: 340px;
+
+		&--insurance {
+			margin-bottom: 15px;
+		}
+
+		&--app li:first-child {
+			margin-right: 140px;
+		}
+	}
+
+	.services__option {
+		margin-bottom: 16px;
+		font-size: 16px;
+		line-height: 130%;
+
+		&::before {
+			width: 13px;
+			height: 10px;
+			left: -22px;
+			top: 5px;
+		}
+	}
+
+	.services__offer {
+		margin-top: 28px;
+		font-size: 16px;
+		margin-bottom: 0;
+		margin-right: 65px;
+	}
+
+	.services__option-button {
+		display: inline-block;
+		padding: 0 30px;
+		margin-top: 15px;
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 48px;
+	}
+}
+
+
+@media (min-width: $desktop-width) {
+	.services {
+		position: relative;
+		max-width: 1170px;
+		margin: 0 auto;
+		padding: 61px 20px;
+	}
+	
+	.services__wrapper {
+		overflow-x: hidden;
+	}
+	
+	.services__tabs {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		flex-wrap: wrap;
+		list-style: none;
+	}
+	
+	.services__tab {
+		position: relative;
+		width: 25%;
+		padding-left: 44px;
+		
+		font-weight: 500;
+		font-size: 18px;
+		text-align: center;
+		line-height: 93px;
+		color: #4C4B51;
+		
+		box-sizing: border-box;
+		cursor: pointer;
+		
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			
+			width: 34px;
+			height: 33px;
+			right: calc(50% + 21px);
+			top: 30px;
+			
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		
+		&--deposits::before {
+			background-image: url("../../images/vector/safe.svg");
+		}
+		
+		&--credit::before {
+			right: calc(50% + 26px);
+			top: 31px;
+			background-image: url("../../images/vector/cards.svg");
+		}
+		
+		&--insurance {
+			padding-left: 39px;
+			
+			&::before {
+				width: 28px;
+				height: 34px;
+				top: 29px;
+				right: calc(50% + 45px);
+				background-image: url("../../images/vector/security.svg");
+			}
+		}
+		
+		&--app {
+			padding-left: 29px;
+			
+			&::before {
+				width: 35px;
+				height: 34px;
+				top: 29px;
+				right: calc(50% + 52px);
+				background-image: url("../../images/vector/cellphone.svg");
+			}
+		}
+		
+		&--active {
+			color: #1F1E25;
+			background-color: #F6F7FF;
+		}
+		
+		&:hover {
+			color: #2c36f2;
+		}
+	}
+
+
+	.services__list {
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	
+	.services__item {
+		position: relative;
+		left: 0%;
+		
+		padding: 60px 70px;
+		min-width: 100vw;
+		min-width: 100%;
+
+		&::before {
+			width: 440px;
+			height: 290px;
+			right: 135px;
+		}
+		
+		&--deposits::before {
+			background-image: url("../../images/piggy-bank-desktop.png");
+		}
+	
+		&--credit::before {
+			top: 55px;
+			background-image: url("../../images/car-desktop.png");
+		}
+	
+		&--insurance::before {
+			top: 48px;
+			background-image: url("../../images/lock-desktop.png");
+		}
+	
+		&--app::before {
+			top: 54px;
+			background-image: url("../../images/cell-desktop.png");
+		}
+	}
+
+	.services__item-wrapper {
+		margin: 0;
+
+		&--app {
+			max-width: 420px;
+		}
+	}
+
+	.services__item-title {
+		font-weight: 500;
+		font-size: 22px;
+
+		&--credit {
+			margin-right: 90px;
+		}
+
+		&--insurance {
+			margin-right: 40px;
+		}
+
+		&--app {
+			margin-right: 0;
+		}
+	}
+
+	.services__options-list {
+		width: auto;
+		margin: 0;
+		padding-top: 28px;
+
+		&--credit {
+			padding-top: 29px;
+		}
+
+		&--app li {
+			margin-right: 50px;
+
+			&:first-child {
+				margin-right: 175px;
+			}
+		}
+	}
+
+	.services__option {
+		margin-bottom: 15px;
+		font-size: 18px;
+		line-height: 130%;
+	}
+
+	.services__option-button {
+		margin-top: 19px;
+		line-height: 51px;
+	}
+
+	.services__offer {
+		margin-right: 50px;
+		font-size: 18px;
+		line-height: 140%;
+	}
+}

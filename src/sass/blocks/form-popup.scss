@@ -1,0 +1,105 @@
+.form-popup__overlay {
+	display: flex;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 5;
+}
+
+.form-popup {
+	position: fixed;
+	display: inline-block;
+
+	height: -moz-fit-content;
+	height: fit-content;
+	width: 290px;
+	padding: 35px 26px;
+	padding-bottom: 18px;
+	margin-right: 17px;
+
+	background: #F6F7FF;
+	border-radius: 4px;
+	align-content: center;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+.form-popup__title {
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+	
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 140%;
+	color: #1F1E25;
+	text-align: center;
+}
+
+.form-popup__text {
+	display: block;
+	margin-top: 13px;
+
+	font-size: 16px;
+	line-height: 140%;
+	text-align: center;
+}
+
+.form-popup__close-button {
+	position: absolute;
+	
+	width: 13px;
+	height: 13px;
+	top: 15px;
+	right: 15px;
+
+	border: none;
+	background-image: url(../../images/vector/cross.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+}
+
+@media (min-width: $tablet-width) {
+	.form-popup {
+		width: 678px;
+		padding: 53px 156px;
+		padding-bottom: 40px;
+	}
+	
+	.form-popup__title {
+		width: unset;
+		font-weight: 500;
+		font-size: 22px;
+	}
+
+	.form-popup__text {
+		margin: 13px 35px;
+	}
+
+	.form-popup__close-button {
+		width: 17px;
+		height: 17px;
+		top: 30px;
+		right: 30px;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.form-popup {
+		width: 500px;
+		padding: 53px 67px;
+		padding-bottom: 40px;
+	}
+
+	.form-popup__close-button {
+		top: 25px;
+		right: 25px;
+	}
+
+}
